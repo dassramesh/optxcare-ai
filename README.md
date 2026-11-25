@@ -47,11 +47,11 @@ optxcare-ai/
 
 ## Installation and Setup
 
+
+
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/dassramesh/optxcare-ai.git
-   ```
+   `git clone https://github.com/dassramesh/optxcare-ai.git`
 
 
 2. Navigate to the project folder:
