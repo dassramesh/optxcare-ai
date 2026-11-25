@@ -30,6 +30,7 @@ OptxCare AI is a web-based IT support assistant designed to help users troublesh
 
 ```text
 optxcare-ai/
+├── .gitignore
 ├── knowledge/
 │   └── troubleshooting.js
 ├── public/
@@ -49,7 +50,7 @@ optxcare-ai/
 1. Clone the repository:
 
    ```bash
-   git clone YOUR_GITHUB_REPOSITORY_URL
+   git clone https://github.com/dassramesh/optxcare-ai.git
    ```
 
 2. Navigate to the project folder:
