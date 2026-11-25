@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4f7fb">
+    <title>OptxCare AI | IT Support Assistant</title>
+
+    <!-- Font Awesome Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+
+        <header class="header">
+
+            <div class="logo">
+                <span class="logo-icon">
+                    <i class="fa-solid fa-headset" aria-hidden="true"></i>
+                </span>
+
+                <div>
+                    <h1>OptxCare AI</h1>
+                    <p>Your Intelligent IT Support Assistant</p>
+                </div>
+            </div>
+
+            <div class="header-actions">
+
+                <span class="status">
+                    <span class="status-dot"></span>
+                    IT Support Online
+                </span>
+
+                <button
+                    id="themeToggle"
+                    class="theme-toggle"
+                    type="button"
+                >
+                    🌙 Dark Mode
+                </button>
+
+            </div>
+
+        </header>
+
+        <main class="chat-container">
+
+            <div class="welcome">
+
+                <div class="welcome-icon">
+                    <i class="fa-solid fa-headset" aria-hidden="true"></i>
+                </div>
+
+                <h2>Hello! How can I help you?</h2>
+
+                <p>
+                    I'm your IT support assistant. Ask me about
+                    Windows, Linux, networking, or technical issues.
+                </p>
+
+            </div>
+
+            <div class="suggested-questions">
+
+                <p>Try asking:</p>
+
+                <div class="suggestion-buttons">
+
+                    <button class="suggestion-btn" type="button">
+                        Wi-Fi not working
+                    </button>
+
+                    <button class="suggestion-btn" type="button">
+                        Printer not responding
+                    </button>
+
+                    <button class="suggestion-btn" type="button">
+                        Computer running slowly
+                    </button>
+
+                    <button class="suggestion-btn" type="button">
+                        DNS error
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="chat-toolbar">
+
+                <button
+                    id="clearChatBtn"
+                    class="clear-chat-btn"
+                    type="button"
+                >
+                    Clear Chat
+                </button>
+
+            </div>
+
+            <div
+                id="chatMessages"
+                class="chat-messages"
+                aria-live="polite"
+                aria-label="Chat messages"
+            ></div>
+
+            <div class="chat-input-area">
+
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Describe your IT issue..."
+                    autocomplete="off"
+                    aria-label="Describe your IT issue"
+                >
+
+                <button id="sendBtn" type="button">
+                    Send ↑
+                </button>
+
+            </div>
+
+            <p class="disclaimer">
+                Support guidance may require verification.
+                Never share passwords or confidential information.
+            </p>
+
+        </main>
+
+        <!-- Support Ticket Section -->
+        <section class="ticket-section">
+
+            <div class="ticket-heading">
+                <div class="ticket-icon">
+                    <i class="fa-solid fa-ticket" aria-hidden="true"></i>
+                </div>
+
+                <div>
+                    <h2>Create a Support Ticket</h2>
+                    <p>
+                        Still experiencing an issue?
+                        Submit a ticket to your IT support team.
+                    </p>
+                </div>
+            </div>
+
+            <form id="ticketForm">
+
+                <div class="form-group">
+
+                    <label for="ticketName">Your Name (Optional)</label>
+
+                    <input
+                        type="text"
+                        id="ticketName"
+                        name="name"
+                        placeholder="Enter your name"
+                        maxlength="100"
+                    >
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="ticketIssue">Describe Your Issue</label>
+
+                    <textarea
+                        id="ticketIssue"
+                        name="issue"
+                        placeholder="Describe the technical issue..."
+                        rows="4"
+                        maxlength="2000"
+                        required
+                    ></textarea>
+
+                </div>
+
+                <button
+                    type="submit"
+                    id="submitTicketBtn"
+                    class="submit-ticket-btn"
+                >
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                    Submit Ticket
+                </button>
+
+                <p
+                    id="ticketFormMessage"
+                    class="ticket-form-message"
+                    role="status"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </section>
+
+    </div>
+
+
+<!-- Support Tickets Dashboard -->
+<section class="tickets-dashboard">
+
+    <div class="tickets-dashboard-heading">
+        <div>
+            <h2>Support Tickets</h2>
+            <p>View and track submitted support requests.</p>
+        </div>
+
+        <button id="refreshTicketsBtn" class="refresh-tickets-btn">
+            <i class="fa-solid fa-rotate" aria-hidden="true"></i>
+            Refresh
+        </button>
+    </div>
+
+    <div class="ticket-stats">
+        <div class="ticket-stat-card">
+            <h3 id="totalTickets">0</h3>
+            <p>Total Tickets</p>
+        </div>
+
+        <div class="ticket-stat-card">
+            <h3 id="openTickets">0</h3>
+            <p>Open Tickets</p>
+        </div>
+
+        <div class="ticket-stat-card">
+            <h3 id="resolvedTickets">0</h3>
+            <p>Resolved Tickets</p>
+        </div>
+    </div>
+
+    <div id="ticketsList" class="tickets-list">
+        <p class="empty-tickets">Loading support tickets...</p>
+    </div>
+
+    <p
+        id="ticketsDashboardMessage"
+        class="tickets-dashboard-message"
+        role="status"
+        aria-live="polite"
+    ></p>
+
+</section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

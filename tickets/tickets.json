@@ -1,0 +1,30 @@
+[
+    {
+        "ticketId": "OPTX-9F0A6462",
+        "name": "Test User",
+        "issue": "Laptop Wi-Fi connection problem",
+        "status": "Open",
+        "createdAt": "2026-11-24T15:18:27.025Z"
+    },
+    {
+        "ticketId": "OPTX-12087225",
+        "name": "Test User",
+        "issue": "Laptop Wi-Fi connection problem",
+        "status": "Open",
+        "createdAt": "2026-11-24T15:22:58.611Z"
+    },
+    {
+        "ticketId": "OPTX-7BE7D967",
+        "name": "Test User",
+        "issue": "My laptop Wi-Fi is not connecting.",
+        "status": "Open",
+        "createdAt": "2026-11-24T15:32:26.352Z"
+    },
+    {
+        "ticketId": "OPTX-10C5F5B7",
+        "name": "Test User",
+        "issue": "Windows laptop keyboard is not working.",
+        "status": "Open",
+        "createdAt": "2026-11-24T16:05:00.648Z"
+    }
+]
