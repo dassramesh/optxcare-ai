@@ -15,6 +15,17 @@ OptxCare AI is a web-based IT support assistant designed to help users troublesh
 - Ticket dashboard with Open and Resolved status management
 - JSON-based ticket storage
 - Responsive user interface
+   
+## Screenshots
+
+### Light Mode
+![OptxCare AI Light Mode](screenshots/light-mode.png)
+
+### Dark Mode
+![OptxCare AI Dark Mode](screenshots/dark-mode.png)
+
+### Support Ticket Dashboard
+![OptxCare AI Ticket Dashboard](screenshots/ticket-dashboard.png)
 
 ## Technologies Used
 
